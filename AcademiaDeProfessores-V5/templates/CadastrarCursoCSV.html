@@ -1,0 +1,11 @@
+{% extends "Header-Footer.html" %}
+{% block content %}
+
+<title>Cadastrar Curso CSV</title>
+<form action="/cadastrarCursoCSV" method="POST" enctype="multipart/form-data">
+    <label for="file">Arquivo: </label>
+    <input type="file" name="file" id="file"><br />
+    <button>Enviar</button>
+</form>
+
+{% endblock %}

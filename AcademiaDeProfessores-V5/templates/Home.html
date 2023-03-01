@@ -1,0 +1,17 @@
+{% extends "Header-Footer-Menu.html" %}
+{% block menu %}
+
+<title>Home</title>
+<div class="container">
+    <form action="{{ url_for('registros') }}" method="GET">
+        <button class="button-menu">Registros</button>
+    </form>
+    <form action="{{ url_for('relatorios') }}" method="GET">
+        <button class="button-menu">Relatórios</button>
+    </form>
+    <form action="{{ url_for('certificados') }}" method="GET">
+        <button class="button-menu">Certificados</button>
+    </form>
+</div>
+
+{% endblock %}

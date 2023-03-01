@@ -1,0 +1,45 @@
+{% extends "Header-Footer.html" %}
+{% block content %}
+
+<title>Cadastrar Curso</title>
+<div class="CentralFocus">
+    <div class="InputText">
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="titulodaAtividadeInput" placeholder="Titulo da Atividade"
+                name="tituloDaAtividade">
+            <label for="titulodaAtividadeInput">Titulo da Atividade</label>
+        </div>
+        <form action="/criarCurso" method="post" enctype="multipart/form-data">
+            <div class="InputText">
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="nomeAplicadorInput" placeholder="Nome do Aplicador"
+                        name="nomeDoAplicador">
+                    <label for="emailApliadorInput">Nome do Aplicador</label>
+                </div>
+                <div class="InputText">
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="dataInput" placeholder="Data da Atividade"
+                            name="dataDaAtividade">
+                        <label for="dataInput">Data da Atividade</label>
+                    </div>
+                </div>
+                <div class="InputNumber">
+                    <div class="form-floating mb-3">
+                        <input type="number" class="form-control" id="duracaoInput" placeholder="Duração da Atividade"
+                            name="duracaoDaAtividade">
+                        <label for="duracaoInput">Duração da Atividade</label>
+                    </div>
+                </div>
+        </form>
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <button class="btn btn-outline-primary w-10 ">Cadastrar</button>
+            </div>
+        </div>
+    </div>
+    <form action="./CriarRegistro.html">
+        <button class="button">Voltar</button>
+    </form>
+
+
+{% endblock %}

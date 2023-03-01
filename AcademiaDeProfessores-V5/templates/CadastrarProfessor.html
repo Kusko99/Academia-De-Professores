@@ -1,0 +1,41 @@
+{% extends "Header-Footer.html" %}
+{% block content %}
+
+<title>Cadastrar Professor</title>
+<div class="CentralFocus">
+    <div class="InputText">
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="nomeProfessorInput" placeholder="Nome do Professor">
+            <label for="nomeProfessorInput">Nome do Professor</label>
+        </div>
+    </div>
+    <div class="InputNumber">
+        <div class="form-floating mb-3">
+            <input type="number" class="form-control" id="RFouCPFInput"
+                placeholder="Registro Funcional ou CPF do Professor">
+            <label for="RFouCPFInput">Registro Funcional ou CPF do Professor</label>
+        </div>
+    </div>
+    <div class="InputNumber">
+        <div class="form-floating mb-3">
+            <input type="number" class="form-control" id="telefoneContatoInput" placeholder="Email do Professor">
+            <label for="telefoneContatoInput">Telefone de Contato do Professor</label>
+        </div>
+    </div>
+    <div class="InputText">
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="emailProfessorInput" placeholder="Email do Professor">
+            <label for="emailProfessorInput">Email do Professor</label>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <button class="btn btn-outline-primary w-10 " onclick="cadastrarProfessor()">Cadastrar</button>
+        </div>
+    </div>
+    <form action="./CriarRegistro.html">
+        <button class="button">Voltar</button>
+    </form>
+
+{% endblock %}

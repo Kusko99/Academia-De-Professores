@@ -1,0 +1,35 @@
+{% extends "Header-Footer.html" %}
+{% block content %}
+
+<div>
+    <h3 class="tag-search">Buscar Pelo Nome</h3>
+    <div class="col-12">
+        <div class="form-floating mb-2 barra-de-pesquisa">
+            <input type="name" class="form-control" id="floatingInput" placeholder="Nome do Professor">
+            <label for="floatingInput">Nome do Curso</label>
+            <img class="lupa col-2" src="{{ url_for('static', filename='IMG/lupa.png') }}" alt="lupa de pesquisa">
+        </div>
+    </div>
+    <div>
+        <form method="POST">
+            <h3 class="tag-search">Buscar Por Data</h3>
+            <div class="barra-de-pesquisa">
+                <div class="col-5 date-bar">
+                    <p class="date-label">De: </p>
+                    <input type="date" name="date-past" class="col-10">
+                </div>
+                <div class="col-5 date-bar">
+                    <p class="date-label">Até: </p>
+                    <input type="date" name="date-future" class="col-10">
+                </div>
+                <input class="lupa col-2" type="image" src="{{ url_for('static', filename='IMG/lupa.png') }}"
+                    alt="lupa de pesquisa">
+            </div>
+        </form>
+    </div>
+    <form class="col-6 back-button" action="{{ url_for('relatorios') }}" method="GET">
+        <button class="button-menu">Voltar</button>
+    </form>
+</div>
+
+{% endblock %}

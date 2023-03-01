@@ -1,0 +1,22 @@
+.barra-de-pesquisa{
+    display: flex;
+    align-items: center;
+}
+
+.lupa{
+    height: 89.5px;
+    object-fit: scale-down;
+}
+
+.date-label{
+    margin-top: 18.75px;
+}
+
+.date-bar{
+    display: flex;
+}
+
+.back-button{
+    display: flex;
+    float: right;
+}

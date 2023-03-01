@@ -1,0 +1,39 @@
+{% extends "Header-Footer.html" %}
+{% block content %}
+
+    <title>InfoCursosPeriodo</title>
+    <h3 class="developed-courses">Cursos Desenvolvidos entre:</h3>
+    <div class="title">
+        <p class="date-slogan">De:</p>
+        <p class="date-box">{{past_date}}</p>
+        <p class="date-slogan">Até:</p>
+        <p class="date-box">{{future_date}}</p>
+    </div>
+    <div class=".table-container">
+        <table>
+            <tr>
+                {% for column in columns %}
+                <th class="table-element">{{ column }}</th>
+                {% endfor %}
+            </tr>
+            {% for row in rows %}
+            <tr>
+                <td class="table-element">{{ row[0] }}</td>
+                <td class="table-element">{{ row[1] }}</td>
+                <td class="table-element table-see-more"><button class="plus-button">{{ row[2] }} <img
+                            src="../static/IMG/sinal-de-mais.png" alt="plus-button"></button></td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+    <div class="button-container">
+        <form class="back-button" action="{{ url_for('download') }}" method="POST">
+            <button class="button-menu" type="button" id="download-button"> <img class="excel-logo" src="../static/IMG/excel.png" alt="excel-logo">
+                <p class="baixar-dados">Baixar Dados</p></button>
+        </form>
+        <form class="back-button" action="{{ url_for('relatorioCurso') }}" method="GET">
+            <button class="button-menu">Voltar</button>
+        </form>
+    </div>
+    
+{% endblock %}

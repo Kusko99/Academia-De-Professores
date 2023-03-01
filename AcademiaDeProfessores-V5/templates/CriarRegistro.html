@@ -1,0 +1,20 @@
+{% extends "Header-Footer-Menu.html" %}
+{% block menu %}
+
+<title>Criar Registro</title>
+<div class="container">
+    <form action="{{ url_for('cadastrarPresenaCSV') }}" method="GET">
+        <button class="button-menu">Marcar Presenca</button>
+    </form>
+    <form action="{{ url_for('cadastrarCursoCSV') }}" method="GET">
+        <button class="button-menu">Registrar Curso</button>
+    </form>
+    <form action="*">
+        <button class="button-menu">Cadastrar Professor</button>
+    </form>
+    <form action="{{ url_for('registros') }}" method="GET">
+        <button class="button-menu">Voltar</button>
+    </form>
+</div>
+
+{% endblock %}
